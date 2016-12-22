@@ -11,9 +11,9 @@ public class RectangleList {
         Collections.sort(rectangles, new Comparator<Rectangle>() {
             @Override
             public int compare(Rectangle o1, Rectangle o2) {
-                if (o1.getLeftBottomX() != o2.getRightTopX()){
-                    return o1.getLeftBottomX() - o2.getRightTopX();
-                } else return o1.getLeftBottomY() - o2.getRightTopY();
+                if (o1.getLeftBottomX() != o2.getLeftBottomX()){
+                    return o1.getLeftBottomX() - o2.getLeftBottomX();
+                } else return o1.getLeftBottomY() - o2.getLeftBottomY();
             }
         });
 
@@ -43,8 +43,7 @@ public class RectangleList {
                             continue;
                         }
 
-                        if (x >= rectangleLeftX && x <= rectangleRightX &&
-                                y >= rectangleBottomY && y <= rectangleTopY) {
+                        if (x >= rectangleLeftX  && y >= rectangleBottomY) {
                             matchedRectangles.add(rectangles.get(i));
                             counter++;
                             break;
