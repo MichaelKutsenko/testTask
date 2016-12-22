@@ -17,6 +17,7 @@ public class RectangleList {
             }
         });
 
+
         Collections.sort(points, new Comparator<Point>() {
             @Override
             public int compare(Point o1, Point o2) {
