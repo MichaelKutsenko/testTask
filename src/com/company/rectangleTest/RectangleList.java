@@ -42,9 +42,9 @@ public class RectangleList {
                         if (x > rectangleRightX || y > rectangleTopY) {
                             counter++;
                             continue;
-                        }
-
-                        if (x >= rectangleLeftX  && y >= rectangleBottomY) {
+                        } else if (x < rectangleLeftX || y < rectangleBottomY) {
+                            break;
+                        } else {
                             matchedRectangles.add(rectangles.get(i));
                             counter++;
                             break;
